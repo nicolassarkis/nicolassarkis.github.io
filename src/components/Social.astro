@@ -4,4 +4,6 @@ const { platform, platformName, username, icon } = Astro.props;
 import "bootstrap-icons/font/bootstrap-icons.css";
 ---
 
-<a href={`https://${platform}/${username}`}>{icon && <span><i class={`bi bi-${icon}`}></i> · </span>}{platformName}</a>
+<a href={`https://${platform}/${username}`} class="hover:text-ctp-peach">
+  {icon && <span><i class={`bi bi-${icon}`}></i> · </span>}{platformName}
+</a>
