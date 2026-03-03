@@ -1,0 +1,26 @@
+---
+import Navigation from "./Navigation.astro";
+
+import { Image } from 'astro:assets';
+import headerImage from "../images/header-catppuccin.png";
+
+const { pageTitle } = Astro.props;
+---
+
+<header>
+  <div class="w-full">
+    <div class="relative drop-shadow-xl drop-shadow-ctp-crust">
+      <Image src={headerImage} alt="Northern lights landscape" class="w-full h-40 sm:h-64 xl:h-96 object-cover rounded-3xl"/>     
+      <div class="text-right absolute right-0 bottom-0 px-4 py-2">
+        <p class="text-3xl text-ctp-peach font-semibold drop-shadow drop-shadow-ctp-crust">Nicolas Sarkis</p>
+        <p class="text-xl font-medium drop-shadow drop-shadow-ctp-crust">Post-doc at Inria Saclay</p>
+      </div>
+      <div class="hidden sm:block text-right absolute left-0 bottom-0 px-4 py-2">
+        <p class="text-4xl text-ctp-peach font-semibold drop-shadow drop-shadow-ctp-crust">{pageTitle}</p>
+      </div>
+    </div>
+    <nav class="my-6 text-center text-lg">
+      <Navigation />
+    </nav>
+  </div>
+</header>
