@@ -1,17 +1,37 @@
 ---
+import BaseLayout from "../layouts/BaseLayout.astro";
 
+import { Image } from 'astro:assets';
+import meImage from "../images/me.jpg";
+
+const pageTitle = "Home";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>My Astro Site</h1>
-	</body>
-</html>
+<BaseLayout pageTitle = {pageTitle}>
+  <div class="flex flex-row flex-wrap justify-between">
+    <div class="w-full lg:w-xs text-center">
+      <h2>Contact info</h2>
+      <Image src={meImage} alt="It's me!" class="mt-4 w-32 h-32 mx-auto rounded-full border-2 border-ctp-peach" />
+      <p>Email: firstname.lastname [at] inria.fr</p>
+    </div>
+
+    <div class="w-full lg:w-xl">
+      <h2>About me</h2>
+
+      <p>
+        I am a post-doc at Inria Saclay since October 2025 in the ECLAIR team (formerly part of the GRACE team).
+        I currently work on generalizing some topics well studied for isogenies over large prime fields to
+        binary ones, along with <a href="https://www.cryptme.in/">Gustavo Banegas</a> and
+        <a href="https://www.lix.polytechnique.fr/~smith/">Benjamin Smith</a>.
+      </p>
+
+      <p>
+        I previously was a PhD student at Institut de Mathématiques de Bordeaux from September 2022 to July 2025
+        in the Inria team CANARI (ex-LFANT), under the supervision of <a href="">Razvan Barbulescu</a> and
+        <a href="">Damien Robert</a>. I worked mainly on the arithmetic of elliptic curves and their associated 
+        Kummer lines, using techniques based on Mumford's theta group theory which is a general object
+        on abelian varieties and offer possible generalizations.
+      </p>
+    </div>
+  </div>
+</BaseLayout>

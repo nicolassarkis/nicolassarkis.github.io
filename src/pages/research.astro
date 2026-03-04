@@ -1,19 +1,30 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import Paper from "../components/Paper.astro";
+import Talk from "../components/Talk.astro";
+
+const authors = {
+  damien: {url: "https://www.math.u-bordeaux.fr/~damienrobert/pro/index.html", name: "Damien Robert"},
+  razvan: {url: "https://razvanbarbulescu.pages.math.cnrs.fr/", name: "Razvan Barbulescu"},
+  nicolas: {url: "https://nicolassarkis.github.io", name: "Nicolas Sarkis"},
+  ben: {url: "https://www.lix.polytechnique.fr/~smith/", name: "Benjamin Smith"},
+  gustavo: {url: "https://www.cryptme.in/", name: "Gustavo Banegas"},
+}
+
 const pageTitle = "Research";
 ---
 
 <BaseLayout pageTitle = {pageTitle}>
-  <div class="my-4">
-    <h2 class="text-ctp-peach text-3xl font-semibold leading-normal">Research interests</h2>
+  <div>
+    <h2>Research interests</h2>
 
-    <p class="my-4">
+    <p>
       I am interested in elliptic curves and more generally abelian varieties arithmetic,
       by looking at operations on the derived Kummer variety. These objects are widely used
       in pre- and post-quantum cryptography via isogenies.
     </p>
 
-    <p class="my-4">
+    <p>
       During my thesis, I mainly focused on studying doubling and differential addition on various
       Kummer line models associated to an elliptic curve. This was done through a unified framework, 
       enabling us to recover efficient old and new formulas. The methods we used are based on Mumford's
@@ -23,63 +34,192 @@ const pageTitle = "Research";
       arithmetic.
     </p>
 
-    <p class="my-4">
+    <p>
       I also studied various simple criteria based on Galois representations to determine whether or not
       a given elliptic curve have a certain model of Kummer line.
     </p>
   </div>
 
-  <div class="my-4">
-    <h2 class="text-ctp-peach text-3xl font-semibold leading-normal">Publications</h2>
+  <div>
+    <h2>Publications</h2>
 
-    <p class="my-4">
+    <p>
       Below is a list of published papers, pre-prints, slides of given talks and other related documents.
     </p>
 
-    <div class="my-4">
-      <h3 class="text-2xl font-semibold leading-normal">Published papers</h3>
+    <div>
+      <h3>Published papers</h3>
 
-      <ul>
-        <li>halfdiffadd</li>
-        <li>2-iso</li>
+      <ul class="list-disc list-inside ml-2 mt-2">
+        <Paper
+          date="Apr. 2025" 
+          authors={[authors.damien, authors.nicolas]}
+          title="Halving differential additions on Kummer lines"
+          published={{url: "https://link.springer.com/chapter/10.1007/978-3-031-91095-1_15" , name: "Eurocrypt 2025"}}
+          archives={[{url: "https://eprint.iacr.org/2024/1582", name: "ePrint"}, {url: "https://hal.science/hal-04724019", name: "HAL"}]}
+        />
+
+        <Paper
+          date="Apr. 2024" 
+          authors={[authors.damien, authors.nicolas]}
+          title="Computing 2-isogenies between Kummer lines"
+          published={{url: "https://cic.iacr.org/p/1/1/26", name: "IACR Communications in Cryptology"}}
+          archives={[{url: "https://eprint.iacr.org/2024/37", name: "ePrint"}, {url: "https://hal.science/hal-04382643", name: "HAL"}]}
+        />
       </ul>
     </div>
 
-    <div class="my-4">
-      <h3 class="text-2xl font-semibold leading-normal">Pre-prints</h3>
+    <div>
+      <h3>Pre-prints</h3>
 
-      <ul>
-        <li>bin-iso</li>
-        <li>galois</li>
+      <ul class="list-disc list-inside ml-2 mt-2">
+        <!-- <li>bin-iso</li> -->
+        <Paper
+          date="Mar. 2025" 
+          authors={[authors.razvan, authors.damien, authors.nicolas]}
+          title="Models of Kummer lines and Galois representations"
+          archives={[{url: "https://eprint.iacr.org/2025/543", name: "ePrint"}, {url: "https://hal.science/hal-05002656/", name: "HAL"}]}
+        />
+      </ul>
+    </div>
+    
+    <div>
+      <h3>Thesis</h3>
+
+      <ul class="list-disc list-inside ml-2 mt-2">
+        <Paper
+          date="Jul. 2025" 
+          title="Arithmetic of Kummer lines · Université de Bordeaux"
+          archiveText="Online archive"
+          archives={[{url: "https://theses.hal.science/tel-05263203", name: "HAL (manuscript)"}, {url: "TODO", name: "slides (defense)"}]}
+          comment="Under the supervision of Razvan Barbulescu and Damien Robert"
+        />
       </ul>
     </div>
 
-    <div class="my-4">
-      <h3 class="text-2xl font-semibold leading-normal">Given talks</h3>
+    <div>
+      <h3>Given talks</h3>
 
-      <ul>
-        <li>grace</li>
-        <li>phd defense</li>
-        <li>jc2 25</li>
-        <li>tout sur l'ancienne page</li>
+      <ul class="list-disc list-inside ml-2 mt-2">
+        <!-- <Talk  -->
+        <!--   date="Feb. 2026" -->
+        <!--   seminar={{url: "TODO", name: "Godzilla seminar"}} -->
+        <!--   place="Palaiseau (France)" -->
+        <!--   title="Arithmetic of Kummer lines" -->
+        <!--   duration="1 hour" -->
+        <!--   slides={[{url: "TODO", name: "dark"}, {url: "TODO", name: "light"}]} -->
+        <!-- /> -->
+
+        <Talk 
+          date="Jan. 2026"
+          seminar={{url: "https://team.inria.fr/grace/seminar/", name: "GRACE seminar"}}
+          place="Palaiseau (France)"
+          title="Arithmetic of Kummer lines"
+          duration="1 hour"
+          slides={[{url: "TODO", name: "dark"}, {url: "TODO", name: "light"}]}
+        />
+
+        <Talk 
+          date="May 2025"
+          seminar={{url: "https://eurocrypt.iacr.org/2025/", name: "Eurocrypt 2025"}}
+          place="Madrid (Spain)"
+          title="Arithmetic of Kummer lines"
+          duration="20 minutes"
+          slides={[{url: "TODO", name: "dark"}, {url: "TODO", name: "light"}]}
+        />
+
+        <Talk 
+          date="Mar. 2025"
+          seminar={{url: "https://indico.math.cnrs.fr/event/11948/", name: "Journées C2 2025"}}
+          place="Pornichet (France)"
+          title="Halving differential addition on Kummer lines"
+          duration="20 minutes"
+          slides={[{url: "TODO", name: "dark"}, {url: "TODO", name: "light"}]}
+        />
+
+        <Talk 
+          date="Mar. 2025"
+          seminar={{url: "https://irmar.univ-rennes.fr/seminars?f%5B0%5D=seminar_type%3A234", name: "GAE seminar"}}
+          place="Rennes (France)"
+          title="Halving differential addition on Kummer lines"
+          duration="1 hour"
+          slides={[{url: "TODO", name: "dark"}, {url: "TODO", name: "light"}]}
+        />
+
+        <Talk 
+          date="Dec. 2024"
+          seminar={{url: "https://caramba.loria.fr/seminars/", name: "CARAMBA seminar"}}
+          place="Nancy (France)"
+          title="Halving differential addition on Kummer lines"
+          duration="1 hour"
+          slides={[{url: "TODO", name: "dark"}, {url: "TODO", name: "light"}]}
+        />
+
+        <Talk 
+          date="Dec. 2023"
+          seminar={{url: "https://canari.inria.fr/seminar/2023.html", name: "CANARI seminar"}}
+          place="Bordeaux (France)"
+          title="Computing 2-isogenies between Kummer lines"
+          duration="1 hour"
+          slides={[{url: "TODO", name: "dark"}, {url: "TODO", name: "light"}]}
+        />
+
+        <Talk 
+          date="Nov. 2023"
+          seminar={{url: "https://webmath.univ-rennes1.fr/irmar/pampers/", name: "Pampers seminar"}}
+          place="Rennes (France)"
+          title="Faster scalar multiplication on elliptic curves"
+          duration="1 hour"
+          slides={[{url: "TODO", name: "dark"}, {url: "TODO", name: "light"}]}
+        />
+
+        <Talk 
+          date="Oct. 2023"
+          seminar={{url: "https://isogeny.club/", name: "Isogeny Club"}}
+          place="online"
+          title="Computing 2-isogenies between Kummer lines"
+          duration="1 hour"
+          slides={[{url: "TODO", name: "dark"}, {url: "TODO", name: "light"}, {url: "https://youtu.be/fNjfZPw90eg", name: "video"}]}
+        />
+
+        <Talk 
+          date="Oct. 2023"
+          seminar={{url: "https://indico.math.cnrs.fr/event/9364/", name: "Journées C2 2023"}}
+          place="Najac (France)"
+          title="Faster scalar multiplication on elliptic curves"
+          duration="10 minutes"
+          slides={[{url: "TODO", name: "dark"}, {url: "TODO", name: "light"}]}
+        />
       </ul>
     </div>
 
-    <div class="my-4">
-      <h3 class="text-2xl font-semibold leading-normal">Thesis</h3>
+    <div>
+      <h3>Miscellaneous</h3>
 
-      <ul>
-        <li>Master's thesis</li>
-        <li>Research internship</li>
-      </ul>
-    </div>
+      <ul class="list-disc list-inside ml-2 mt-2">
+        <Paper
+          date="Apr. 2024" 
+          title="Kummer lines of elliptic curves"
+          archiveText="Local file"
+          archives={[{url: "TODO", name: "Poster"}]}
+          comment="Poster for doctoral school day"
+        />
 
-    <div class="my-4">
-      <h3 class="text-2xl font-semibold leading-normal">Misc</h3>
+        <Paper
+          date="Mar. - Jun. 2022" 
+          title="Spin of prime ideals (written in French)"
+          archiveText="Local file"
+          archives={[{url: "TODO", name: "Report"}]}
+          comment="Master's thesis under the supervision of Sary Drappeau (Aix-Marseille Université)"
+        />
 
-      <ul>
-        <li>Master's thesis</li>
-        <li>Research internship</li>
+        <Paper
+          date="May - Jul. 2020" 
+          title="Zig-zag product (written in French)"
+          archiveText="Local file"
+          archives={[{url: "TODO", name: "Report"}]}
+          comment="Research internship under the supervision of Alain Valette (Université de Neuchâtel)"
+        />
       </ul>
     </div>
   </div>

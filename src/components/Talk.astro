@@ -1,0 +1,29 @@
+---
+const {
+  date, 
+  seminar,
+  place,
+  title, 
+  slides,
+  comment,
+  duration,
+} = Astro.props
+---
+
+<li>
+  {date} ·
+  <a href={seminar.url}>{seminar.name}</a>, {place} ·
+  {title}
+  <ul class="ml-8">
+    {comment && 
+      <li>
+        {comment}
+      </li>
+    }
+    <li>
+      Slides ({duration}): {slides.map((slide) =>
+        <a href={slide.url}>{slide.name}</a><span class="last:hidden">, </span>
+      )}
+    </li>
+  </ul>
+</li>

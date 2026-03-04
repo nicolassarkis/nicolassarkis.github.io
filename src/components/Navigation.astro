@@ -1,20 +1,28 @@
 ---
+const nav = [
+  {
+    href: "/",
+    name: "Home",
+  },
+  {
+    href: "/research",
+    name: "Research",
+  },
+  {
+    href: "/teaching",
+    name: "Teaching",
+  },
+  {
+    href: "/misc",
+    name: "Misc",
+  },
+]
 ---
 
 <ul class="flex justify-center">
-  <li class="px-4 border-r-2">
-    <a href="/" class="hover:text-ctp-peach">Home</a>
-  </li>
-  <li class="px-4 border-r-2">
-    <a href="/research" class="hover:text-ctp-peach">Research</a>
-  </li>
-  <li class="px-4 border-r-2">
-    <a href="/teaching" class="hover:text-ctp-peach">Teaching</a>
-  </li>
-  <!-- <li class="w-28 border-r-2"> -->
-  <!--   <a href="/teaching" class="hover:font-semibold">CV</a> -->
-  <!-- </li> -->
-  <li class="px-4">
-    <a href="/misc" class="hover:text-ctp-peach">Misc</a>
-  </li>
+  {nav.map((link) =>
+    <li class="px-4 border-r-2 last:border-r-0">
+    <a href={link.href} class="font-medium">{link.name}</a>
+    </li>
+  )}
 </ul>

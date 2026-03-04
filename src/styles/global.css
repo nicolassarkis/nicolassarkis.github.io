@@ -1,7 +1,24 @@
 @import "tailwindcss";
+@import "bootstrap-icons/font/bootstrap-icons.css";
 @import "@catppuccin/tailwindcss/macchiato.css";
 
 @theme {
   --font-sans: "Open Sans", sans-serif;
   --font-mono: "Space Mono", monospace;
+}
+
+@layer components {
+  h2 {
+    @apply text-ctp-peach text-3xl font-semibold leading-normal;
+  }
+  h3 {
+    @apply text-2xl font-semibold leading-normal;
+  }
+  #mainDiv div,
+  #mainDiv p {
+    @apply my-4;
+  }
+  a {
+    @apply text-ctp-peach hover:text-ctp-peach-200 active:text-ctp-green;
+  }
 }

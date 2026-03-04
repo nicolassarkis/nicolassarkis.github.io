@@ -1,0 +1,43 @@
+---
+const {
+  date, 
+  authors, 
+  title, 
+  published, 
+  archiveText = "Online archives", 
+  archives,
+  comment,
+} = Astro.props
+---
+
+<li>
+  {date} ·
+  <!-- This is a bit of a scam so that the last pseudo-class works (needs to be in a list) -->
+  {authors &&
+    <span><ul class="inline">
+      <li class="inline">
+        {authors.map((author) => 
+          <a href={author.url}>{author.name}</a><span class="last:hidden">, </span>
+        )}
+      </li>
+    </ul> ·</span>
+  }
+  {title}
+  <ul class="ml-8">
+    {published &&
+      <li>
+        {published.name}: <a href={published.url}>published version</a>
+      </li>
+    }
+    {comment && 
+      <li>
+        {comment}
+      </li>
+    }
+    <li>
+      {archiveText}: {archives.map((archive) =>
+        <a href={archive.url}>{archive.name}</a><span class="last:hidden">, </span>
+      )}
+    </li>
+  </ul>
+</li>
