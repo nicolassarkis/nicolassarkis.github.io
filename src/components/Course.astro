@@ -1,0 +1,26 @@
+---
+const {
+  date, 
+  course,
+  year,
+  language,
+  place,
+  comment,
+} = Astro.props
+---
+
+<li>
+  {date} ·
+  {course.url ?
+    <a href={course.url}>{course.name} ({language})</a> :
+    <span>{course} ({language})</span>
+  }
+  <ul class="ml-8">
+    <li>{year} · {place}</li>
+    {comment && 
+      <li>
+        {comment}
+      </li>
+    }
+  </ul>
+</li>

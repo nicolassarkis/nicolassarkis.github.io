@@ -1,18 +1,63 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import Course from "../components/Course.astro";
+
 const pageTitle = "Teaching";
 ---
 
 <BaseLayout pageTitle = {pageTitle}>
   <div>
-    <p>Here are the classes where I gave exercise sessions (most of these are in French).</p>
+    <p>Here are the classes where I gave exercise sessions (most of these are in French):</p>
   </div>
   <div>
-    <h2>Web programming (Polytechnique Bachelor, 2025-2026)</h2>
-    <h2>Mathématiques 1A (IUT GMP de Bordeaux, 2024-2025)</h2>
-    <h2> 2A (IUT GMP de Bordeaux, 2024-2025)</h2>
-    <h2>Excel 1A (IUT GMP de Bordeaux, 2024-2025)</h2>
-    <h2>Analyse L1 (Université de Bordeaux, 2022-2024)</h2>
-    <h2>Outils Mathématiques L1 (Université de Bordeaux, 2022-2024)</h2>
+    <ul class="list-disc list-inside ml-2 mt-2">
+      <Course
+        date="2025-2026" 
+        course="Web programming"
+        year="1st year"
+        language="en"
+        place="Polytechnique Computer Science bachelor"
+      />
+
+      <Course
+        date="2024-2025" 
+        course="Mathématiques"
+        year="1ère année"
+        language="fr"
+        place="IUT Génie Mécanique et Productique de Bordeaux"
+      />
+
+      <Course
+        date="2024-2025" 
+        course="Excel"
+        year="1ère année"
+        language="fr"
+        place="IUT Génie Mécanique et Productique de Bordeaux"
+      />
+
+      <Course
+        date="2024-2025" 
+        course="Algèbre linéaire & Équations différentielles"
+        year="2ème année"
+        language="fr"
+        place="IUT Génie Mécanique et Productique de Bordeaux"
+      />
+
+      <Course
+        date="2022-2024" 
+        course={{url: "./teaching/analyse", name: "Analyse"}}
+        year="L1"
+        language="fr"
+        place="Université de Bordeaux"
+      />
+
+      <Course
+        date="2022-2024" 
+        course={{url: "./teaching/outils-math", name: "Outils mathématiques"}}
+        year="L1"
+        language="fr"
+        place="Université de Bordeaux"
+      />
+    </ul>
   </div>
 </BaseLayout>
