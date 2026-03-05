@@ -12,9 +12,10 @@ const authors = {
 }
 
 const pageTitle = "Research";
+const lastUpdated = 0;
 ---
 
-<BaseLayout pageTitle = {pageTitle}>
+<BaseLayout pageTitle={pageTitle} lastUpdated={lastUpdated}>
   <div>
     <h2>Research interests</h2>
 
@@ -239,8 +240,8 @@ const pageTitle = "Research";
           title="Échange de clé de Diffie-Hellman"
           duration="30 minutes"
           slides={[
-            {url: "/files/research/misc/2024-06-chiche-dark.pdf", name: "dark"}, 
-            {url: "/files/research/misc/2024-06-chiche-light.pdf", name: "light"}
+            {url: "/files/research/misc/2024-06-chiche-dark.pdf", name: "dark (fr)"}, 
+            {url: "/files/research/misc/2024-06-chiche-light.pdf", name: "light (fr)"}
           ]}
           comment="Introductory scientific talk for high-school students"
         />
@@ -255,17 +256,17 @@ const pageTitle = "Research";
 
         <Paper
           date="Mar. - Jun. 2022" 
-          title="Spin of prime ideals (written in French)"
+          title="Spin of prime ideals"
           archiveText="Local file"
-          archives={[{url: "/files/research/misc/spin.pdf", name: "Report"}]}
+          archives={[{url: "/files/research/misc/spin.pdf", name: "Report (fr)"}]}
           comment="Master's thesis under the supervision of Sary Drappeau (Aix-Marseille Université)"
         />
 
         <Paper
           date="May - Jul. 2020" 
-          title="Zig-zag product (written in French)"
+          title="Zig-zag product"
           archiveText="Local file"
-          archives={[{url: "/files/research/misc/zigzag.pdf", name: "Report"}]}
+          archives={[{url: "/files/research/misc/zigzag.pdf", name: "Report (fr)"}]}
           comment="Research internship under the supervision of Alain Valette (Université de Neuchâtel)"
         />
       </ul>

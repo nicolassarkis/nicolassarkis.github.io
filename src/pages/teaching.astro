@@ -3,9 +3,10 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import Course from "../components/Course.astro";
 
 const pageTitle = "Teaching";
+const lastUpdated = 0;
 ---
 
-<BaseLayout pageTitle = {pageTitle}>
+<BaseLayout pageTitle={pageTitle} lastUpdated={lastUpdated}>
   <div>
     <p>Here are the classes where I gave exercise sessions (most of these are in French):</p>
   </div>
@@ -45,7 +46,7 @@ const pageTitle = "Teaching";
 
       <Course
         date="2022-2024" 
-        course={{url: "./teaching/analyse", name: "Analyse"}}
+        course={{url: "/teaching/analyse", name: "Analyse"}}
         year="L1"
         language="fr"
         place="Université de Bordeaux"
@@ -53,7 +54,7 @@ const pageTitle = "Teaching";
 
       <Course
         date="2022-2024" 
-        course={{url: "./teaching/outils-math", name: "Outils mathématiques"}}
+        course={{url: "/teaching/outils-math", name: "Outils mathématiques"}}
         year="L1"
         language="fr"
         place="Université de Bordeaux"

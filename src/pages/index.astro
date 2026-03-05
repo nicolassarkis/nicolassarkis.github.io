@@ -5,9 +5,10 @@ import { Image } from 'astro:assets';
 import meImage from "../images/me.jpg";
 
 const pageTitle = "Home";
+const lastUpdated = 0;
 ---
 
-<BaseLayout pageTitle = {pageTitle}>
+<BaseLayout pageTitle={pageTitle} lastUpdated={lastUpdated}>
   <div class="flex flex-row flex-wrap justify-between">
     <div class="w-full lg:w-xs text-center">
       <h2>Contact info</h2>

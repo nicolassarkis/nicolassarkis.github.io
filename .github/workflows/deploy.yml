@@ -20,6 +20,19 @@ jobs:
     steps:
       - name: Checkout your repository using git
         uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - name: Inject lastUpdated timestamp
+        run: |
+          shopt -s globstar
+          for file in src/pages/**/*.{astro,md,mdx,ts,js}; do
+            if [ -f "$file" ]; then
+              if grep -q "const lastUpdated" "$file"; then
+                ts=$(git log -1 --pretty="format:%at" -- "$file")
+                sed -i -E "s/const lastUpdated = [0-9]+;/const lastUpdated = $ts;/" "$file"
+              fi
+            fi
+          done
       - name: Install, build, and upload your site
         uses: withastro/action@v5
 
