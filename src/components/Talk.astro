@@ -12,7 +12,10 @@ const {
 
 <li>
   {date} ·
-  <a href={seminar.url}>{seminar.name}</a>, {place} ·
+  {seminar.url ?
+    <a href={seminar.url}>{seminar.name}</a> :
+    seminar.name
+  }, {place} ·
   {title}
   <ul class="ml-8">
     {comment && 
@@ -20,10 +23,12 @@ const {
         {comment}
       </li>
     }
-    <li>
-      Slides ({duration}): {slides.map((slide) =>
-        <a href={slide.url}>{slide.name}</a><span class="last:hidden">, </span>
-      )}
-    </li>
+    {slides &&
+      <li>
+        Slides ({duration}): {slides.map((slide) =>
+          <a href={slide.url}>{slide.name}</a><span class="last:hidden">, </span>
+        )}
+      </li>
+    }
   </ul>
 </li>

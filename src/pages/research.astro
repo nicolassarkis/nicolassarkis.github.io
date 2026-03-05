@@ -56,7 +56,11 @@ const pageTitle = "Research";
           authors={[authors.damien, authors.nicolas]}
           title="Halving differential additions on Kummer lines"
           published={{url: "https://link.springer.com/chapter/10.1007/978-3-031-91095-1_15" , name: "Eurocrypt 2025"}}
-          archives={[{url: "https://eprint.iacr.org/2024/1582", name: "ePrint"}, {url: "https://hal.science/hal-04724019", name: "HAL"}]}
+          archives={[
+            {url: "/files/research/paper/2025-04-halfdiffadd.pdf", name: "local file"}, 
+            {url: "https://eprint.iacr.org/2024/1582", name: "ePrint"}, 
+            {url: "https://hal.science/hal-04724019", name: "HAL"}
+          ]}
         />
 
         <Paper
@@ -64,7 +68,11 @@ const pageTitle = "Research";
           authors={[authors.damien, authors.nicolas]}
           title="Computing 2-isogenies between Kummer lines"
           published={{url: "https://cic.iacr.org/p/1/1/26", name: "IACR Communications in Cryptology"}}
-          archives={[{url: "https://eprint.iacr.org/2024/37", name: "ePrint"}, {url: "https://hal.science/hal-04382643", name: "HAL"}]}
+          archives={[
+            {url: "/files/research/paper/2024-04-2-isogenies.pdf", name: "local file"}, 
+            {url: "https://eprint.iacr.org/2024/37", name: "ePrint"}, 
+            {url: "https://hal.science/hal-04382643", name: "HAL"}
+          ]}
         />
       </ul>
     </div>
@@ -78,7 +86,11 @@ const pageTitle = "Research";
           date="Mar. 2025" 
           authors={[authors.razvan, authors.damien, authors.nicolas]}
           title="Models of Kummer lines and Galois representations"
-          archives={[{url: "https://eprint.iacr.org/2025/543", name: "ePrint"}, {url: "https://hal.science/hal-05002656/", name: "HAL"}]}
+          archives={[
+            {url: "/files/research/paper/2025-03-galois.pdf", name: "local file"}, 
+            {url: "https://eprint.iacr.org/2025/543", name: "ePrint"}, 
+            {url: "https://hal.science/hal-05002656/", name: "HAL"}
+          ]}
         />
       </ul>
     </div>
@@ -91,7 +103,12 @@ const pageTitle = "Research";
           date="Jul. 2025" 
           title="Arithmetic of Kummer lines · Université de Bordeaux"
           archiveText="Online archive"
-          archives={[{url: "https://theses.hal.science/tel-05263203", name: "HAL (manuscript)"}, {url: "TODO", name: "slides (defense)"}]}
+          archives={[
+            {url: "/files/research/phd/manuscript.pdf", name: "local file (manuscript)"}, 
+            {url: "https://theses.hal.science/tel-05263203", name: "HAL (manuscript)"}, 
+            {url: "/files/research/phd/slides-dark.pdf", name: "slides (defense, dark)"},
+            {url: "/files/research/phd/slides-light.pdf", name: "slides (defense, light)"}
+          ]}
           comment="Under the supervision of Razvan Barbulescu and Damien Robert"
         />
       </ul>
@@ -101,14 +118,13 @@ const pageTitle = "Research";
       <h3>Given talks</h3>
 
       <ul class="list-disc list-inside ml-2 mt-2">
-        <!-- <Talk  -->
-        <!--   date="Feb. 2026" -->
-        <!--   seminar={{url: "TODO", name: "Godzilla seminar"}} -->
-        <!--   place="Palaiseau (France)" -->
-        <!--   title="Arithmetic of Kummer lines" -->
-        <!--   duration="1 hour" -->
-        <!--   slides={[{url: "TODO", name: "dark"}, {url: "TODO", name: "light"}]} -->
-        <!-- /> -->
+        <Talk 
+          date="Feb. 2026"
+          seminar={{name: "Godzilla seminar"}}
+          place="Palaiseau (France)"
+          title="Arithmetic on elliptic curves in practice (with Elric Isoardo)"
+          comment="Non-permanent members team seminar"
+        />
 
         <Talk 
           date="Jan. 2026"
@@ -116,7 +132,10 @@ const pageTitle = "Research";
           place="Palaiseau (France)"
           title="Arithmetic of Kummer lines"
           duration="1 hour"
-          slides={[{url: "TODO", name: "dark"}, {url: "TODO", name: "light"}]}
+          slides={[
+            {url: "/files/research/slides/2026-01-grace-dark.pdf", name: "dark"}, 
+            {url: "/files/research/slides/2026-01-grace-light.pdf", name: "light"}
+          ]}
         />
 
         <Talk 
@@ -125,7 +144,10 @@ const pageTitle = "Research";
           place="Madrid (Spain)"
           title="Arithmetic of Kummer lines"
           duration="20 minutes"
-          slides={[{url: "TODO", name: "dark"}, {url: "TODO", name: "light"}]}
+          slides={[
+            {url: "/files/research/slides/2025-05-ec-dark.pdf", name: "dark"}, 
+            {url: "/files/research/slides/2025-05-ec-light.pdf", name: "light"}
+          ]}
         />
 
         <Talk 
@@ -134,7 +156,10 @@ const pageTitle = "Research";
           place="Pornichet (France)"
           title="Halving differential addition on Kummer lines"
           duration="20 minutes"
-          slides={[{url: "TODO", name: "dark"}, {url: "TODO", name: "light"}]}
+          slides={[
+            {url: "/files/research/slides/2025-03-jc2-dark.pdf", name: "dark"}, 
+            {url: "/files/research/slides/2025-03-jc2-light.pdf", name: "light"}
+          ]}
         />
 
         <Talk 
@@ -143,7 +168,10 @@ const pageTitle = "Research";
           place="Rennes (France)"
           title="Halving differential addition on Kummer lines"
           duration="1 hour"
-          slides={[{url: "TODO", name: "dark"}, {url: "TODO", name: "light"}]}
+          slides={[
+            {url: "/files/research/slides/2025-03-gae-dark.pdf", name: "dark"}, 
+            {url: "/files/research/slides/2025-03-gae-light.pdf", name: "light"}
+          ]}
         />
 
         <Talk 
@@ -152,7 +180,10 @@ const pageTitle = "Research";
           place="Nancy (France)"
           title="Halving differential addition on Kummer lines"
           duration="1 hour"
-          slides={[{url: "TODO", name: "dark"}, {url: "TODO", name: "light"}]}
+          slides={[
+            {url: "/files/research/slides/2024-12-caramba-dark.pdf", name: "dark"}, 
+            {url: "/files/research/slides/2024-12-caramba-light.pdf", name: "light"}
+          ]}
         />
 
         <Talk 
@@ -161,7 +192,7 @@ const pageTitle = "Research";
           place="Bordeaux (France)"
           title="Computing 2-isogenies between Kummer lines"
           duration="1 hour"
-          slides={[{url: "TODO", name: "dark"}, {url: "TODO", name: "light"}]}
+          slides={[{url: "/files/research/slides/2023-12-canari.pdf", name: "dark"}]}
         />
 
         <Talk 
@@ -170,7 +201,8 @@ const pageTitle = "Research";
           place="Rennes (France)"
           title="Faster scalar multiplication on elliptic curves"
           duration="1 hour"
-          slides={[{url: "TODO", name: "dark"}, {url: "TODO", name: "light"}]}
+          slides={[{url: "/files/research/slides/2023-11-pampers.pdf", name: "dark"}]}
+          comment="Non-permanent members team seminar"
         />
 
         <Talk 
@@ -179,7 +211,10 @@ const pageTitle = "Research";
           place="online"
           title="Computing 2-isogenies between Kummer lines"
           duration="1 hour"
-          slides={[{url: "TODO", name: "dark"}, {url: "TODO", name: "light"}, {url: "https://youtu.be/fNjfZPw90eg", name: "video"}]}
+          slides={[
+            {url: "/files/research/slides/2023-10-isogenyclub.pdf", name: "dark"}, 
+            {url: "https://youtu.be/fNjfZPw90eg", name: "video"}
+          ]}
         />
 
         <Talk 
@@ -188,7 +223,7 @@ const pageTitle = "Research";
           place="Najac (France)"
           title="Faster scalar multiplication on elliptic curves"
           duration="10 minutes"
-          slides={[{url: "TODO", name: "dark"}, {url: "TODO", name: "light"}]}
+          slides={[{url: "/files/research/slides/2023-10-jc2.pdf", name: "dark"}]}
         />
       </ul>
     </div>
@@ -197,11 +232,24 @@ const pageTitle = "Research";
       <h3>Miscellaneous</h3>
 
       <ul class="list-disc list-inside ml-2 mt-2">
+        <Talk 
+          date="Jun. 2024"
+          seminar={{url: "https://chiche.inria.fr/", name: "Chiche Inria"}}
+          place="Bordeaux (France)"
+          title="Échange de clé de Diffie-Hellman"
+          duration="30 minutes"
+          slides={[
+            {url: "/files/research/misc/2024-06-chiche-dark.pdf", name: "dark"}, 
+            {url: "/files/research/misc/2024-06-chiche-light.pdf", name: "light"}
+          ]}
+          comment="Introductory scientific talk for high-school students"
+        />
+
         <Paper
           date="Apr. 2024" 
           title="Kummer lines of elliptic curves"
           archiveText="Local file"
-          archives={[{url: "TODO", name: "Poster"}]}
+          archives={[{url: "/files/research/misc/poster-edmi.pdf", name: "Poster"}]}
           comment="Poster for doctoral school day"
         />
 
@@ -209,7 +257,7 @@ const pageTitle = "Research";
           date="Mar. - Jun. 2022" 
           title="Spin of prime ideals (written in French)"
           archiveText="Local file"
-          archives={[{url: "TODO", name: "Report"}]}
+          archives={[{url: "/files/research/misc/spin.pdf", name: "Report"}]}
           comment="Master's thesis under the supervision of Sary Drappeau (Aix-Marseille Université)"
         />
 
@@ -217,7 +265,7 @@ const pageTitle = "Research";
           date="May - Jul. 2020" 
           title="Zig-zag product (written in French)"
           archiveText="Local file"
-          archives={[{url: "TODO", name: "Report"}]}
+          archives={[{url: "/files/research/misc/zigzag.pdf", name: "Report"}]}
           comment="Research internship under the supervision of Alain Valette (Université de Neuchâtel)"
         />
       </ul>
